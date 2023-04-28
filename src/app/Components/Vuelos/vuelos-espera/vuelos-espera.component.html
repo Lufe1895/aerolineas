@@ -1,0 +1,29 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Hora de Salida</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let v of Vuelos">
+                <td>{{ v.codigo }}</td>
+                <td>{{ Converter.formatDate(v.fecha) }}</td>
+                <td>{{ v.salida }}</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <button class="btn btn-danger">Cancelar</button>
+                        <button class="btn btn-primary">Despegar</button>
+                        <button class="btn btn-info">Detalles</button>
+                        <button class="btn btn-warning">Editar</button>
+                        <button class="btn btn-danger">Eliminar</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
